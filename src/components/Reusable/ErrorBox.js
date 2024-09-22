@@ -12,8 +12,7 @@ export default function ErrorBox(props) {
       margin={props.margin || '1rem auto'}
       gap={props.gap || '12px'}
       flex={props.flex || 'auto'}
-      width={props.width || '100%'}
-      maxWidth="600px" 
+      maxWidth="600px"
       sx={{
         padding: '1.5rem',
         flexDirection: { xs: 'column', sm: 'row' },
@@ -21,21 +20,21 @@ export default function ErrorBox(props) {
         border: props.type === 'info' 
           ? '1px solid #f5a922' 
           : '1px solid #DC2941',
-        borderRadius: '12px', 
+        borderRadius: '12px',
         background: props.type === 'info'
           ? 'rgba(245, 169, 34, .1)' 
           : 'rgba(220, 41, 65, .25)',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', 
-        transition: 'all 0.3s ease', 
+        transition: 'all 0.3s ease',
         '&:hover': {
-          boxShadow: '0 6px 18px rgba(0, 0, 0, 0.2)', 
+          boxShadow: '0 6px 18px rgba(0, 0, 0, 0.2)',
         },
       }}
     >
       <ErrorOutlineIcon 
         sx={{ 
-          fontSize: '28px', 
-          color: props.type === 'info' ? '#f5a922' : '#DC2941', 
+          fontSize: { xs: '24px', sm: '28px' }, 
+          color: props.type === 'info' ? '#f5a922' : '#DC2941',
         }} 
       />
 
